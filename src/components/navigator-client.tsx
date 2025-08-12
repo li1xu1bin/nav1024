@@ -24,7 +24,6 @@ export function NavigatorClient({
   websites,
   categories,
 }: NavigatorClientProps) {
-  const [searchTerm, setSearchTerm] = useState('');
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -55,13 +54,6 @@ export function NavigatorClient({
     }
   };
 
-  const filteredWebsites = websites.filter((site) => {
-    const searchMatch =
-      site.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      site.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return searchMatch;
-  });
-
   return (
     <SidebarProvider>
       <Sidebar collapsible="icon" className="border-r">
@@ -72,18 +64,18 @@ export function NavigatorClient({
       </Sidebar>
       <SidebarInset>
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
-          <header className="flex flex-col items-center justify-center mb-8 relative">
+          <header className="flex flex-col items-center justify-center mb-16 relative">
              <div className="mb-6 flex items-center gap-3">
                 <Image src="/logo.png" alt="Navigator Logo" width={180} height={180} className="rounded-lg" />
             </div>
-            <div className="w-full max-w-md">
-              <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            <div className="w-full">
+              <SearchBar />
             </div>
             <div className="absolute right-0 top-1/2 -translate-y-1/2">
               <SidebarTrigger className="md:hidden" />
             </div>
           </header>
-          <SiteList websites={filteredWebsites} categories={categories} />
+          <SiteList websites={websites} categories={categories} />
         </main>
         {showBackToTop && (
           <Button
