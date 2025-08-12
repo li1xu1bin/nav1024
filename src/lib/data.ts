@@ -40,7 +40,8 @@ export type Website = {
   description: string;
   url: string;
   category: string;
-  icon: IconName;
+  icon?: IconName;
+  imageUrl?: string;
 };
 
 export type Category = {
@@ -71,7 +72,7 @@ export const websites: Website[] = [
     description: 'An AI chatbot from ByteDance.',
     url: 'https://www.doubao.com/',
     category: '常用',
-    icon: 'BrainCircuit',
+    imageUrl: '/doubao-icon.png',
   },
   {
     id: 'gemini',
@@ -96,7 +97,7 @@ export const websites: Website[] = [
       'AI-powered image generation service for creating stunning visuals.',
     url: 'https://jimeng.ai/',
     category: 'AI图像',
-    icon: 'Palette',
+    imageUrl: '/jimeng-logo-1.png',
   },
   {
     id: 'stablediffusion',
