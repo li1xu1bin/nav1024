@@ -77,7 +77,7 @@ export function SearchBar() {
         }
       }}>
         <div 
-          className="absolute -bottom-2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-primary transition-all duration-300 ease-in-out"
+          className="absolute -top-2 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-primary transition-all duration-300 ease-in-out"
           style={arrowStyle}
         />
         {searchEngines.map(({ id, name }) => (
