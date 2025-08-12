@@ -49,7 +49,7 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  {id: 'productivity', name: 'Productivity'},
+  {id: 'productivity', name: '常用'},
   {id: 'design', name: 'Design'},
   {id: 'development', name: 'Development'},
   {id: 'social', name: 'Social'},
@@ -58,31 +58,36 @@ export const categories: Category[] = [
 
 export const websites: Website[] = [
   {
-    id: 'notion',
-    title: 'Notion',
-    description:
-      'The all-in-one workspace for your notes, tasks, wikis, and databases.',
-    url: 'https://notion.so',
-    category: 'Productivity',
+    id: 'chatgpt',
+    title: 'ChatGPT',
+    description: 'A powerful language model by OpenAI for conversations.',
+    url: 'https://chat.openai.com/',
+    category: '常用',
     icon: 'BrainCircuit',
   },
   {
-    id: 'slack',
-    title: 'Slack',
-    description:
-      'Slack is your digital HQ. It’s where the people you need, the information you share, and the tools you use come together.',
-    url: 'https://slack.com',
-    category: 'Productivity',
-    icon: 'MessageSquare',
+    id: 'doubao',
+    title: '豆包',
+    description: 'An AI chatbot from ByteDance.',
+    url: 'https://www.doubao.com/',
+    category: '常用',
+    icon: 'BrainCircuit',
   },
   {
-    id: 'google-drive',
-    title: 'Google Drive',
-    description:
-      'A safe place for all your files. Get access to files anywhere through secure cloud storage and file backup for your photos, videos, files and more.',
-    url: 'https://drive.google.com',
-    category: 'Productivity',
-    icon: 'FolderKanban',
+    id: 'gemini',
+    title: 'Gemini',
+    description: 'Google\'s largest and most capable AI model.',
+    url: 'https://gemini.google.com/',
+    category: '常用',
+    icon: 'BrainCircuit',
+  },
+  {
+    id: 'deepseek',
+    title: 'DeepSeek',
+    description: 'An advanced AI model for code generation and more.',
+    url: 'https://www.deepseek.com/',
+    category: '常用',
+    icon: 'BrainCircuit',
   },
   {
     id: 'figma',
