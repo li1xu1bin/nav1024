@@ -18,9 +18,9 @@ export function SiteCard({site}: SiteCardProps) {
       <Card className="flex h-full cursor-pointer items-center gap-4 bg-card p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
           {site.imageUrl ? (
-            <Image src={site.imageUrl} alt={`${site.title} logo`} width={24} height={24} className="h-6 w-6 object-contain" />
+            <Image src={site.imageUrl} alt={`${site.title} logo`} width={48} height={48} className="h-12 w-12 object-cover rounded-lg" />
           ) : site.icon ? (
-            <Icon name={site.icon} className="h-6 w-6" />
+            <Icon name={site.icon} className="h-8 w-8" />
           ) : null}
         </div>
         <div className="flex-grow overflow-hidden">
