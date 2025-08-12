@@ -50,7 +50,7 @@ export type Category = {
 
 export const categories: Category[] = [
   {id: 'productivity', name: '常用'},
-  {id: 'design', name: 'Design'},
+  {id: 'ai-image', name: 'AI图像'},
   {id: 'development', name: 'Development'},
   {id: 'social', name: 'Social'},
   {id: 'news', name: 'News'},
@@ -90,31 +90,31 @@ export const websites: Website[] = [
     icon: 'BrainCircuit',
   },
   {
-    id: 'figma',
-    title: 'Figma',
+    id: 'jimeng',
+    title: '即梦',
     description:
-      'The collaborative interface design tool. For brainstorming, designing, and building.',
-    url: 'https://figma.com',
-    category: 'Design',
-    icon: 'LayoutTemplate',
-  },
-  {
-    id: 'dribbble',
-    title: 'Dribbble',
-    description:
-      'Dribbble is the world’s leading community for creatives to share, grow, and get hired.',
-    url: 'https://dribbble.com',
-    category: 'Design',
+      'AI-powered image generation service for creating stunning visuals.',
+    url: 'https://jimeng.ai/',
+    category: 'AI图像',
     icon: 'Palette',
   },
   {
-    id: 'behance',
-    title: 'Behance',
+    id: 'stablediffusion',
+    title: 'Stable Diffusion',
     description:
-      'The leading online platform to showcase & discover creative work.',
-    url: 'https://www.behance.net/',
-    category: 'Design',
-    icon: 'ShoppingBag',
+      'A powerful open-source text-to-image model by Stability AI.',
+    url: 'https://stability.ai/',
+    category: 'AI图像',
+    icon: 'Palette',
+  },
+  {
+    id: 'midjourney',
+    title: 'Midjourney',
+    description:
+      'An independent research lab exploring new mediums of thought and expanding the imaginative powers of the human species.',
+    url: 'https://www.midjourney.com/',
+    category: 'AI图像',
+    icon: 'Palette',
   },
   {
     id: 'github',
