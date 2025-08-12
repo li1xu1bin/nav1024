@@ -32,7 +32,7 @@ export function SidebarNav({
     <>
       <SidebarHeader>
         <div className="flex items-center justify-center gap-3 px-3 py-4">
-          <Image src="/logo.png" alt="Navigator Logo" width={40} height={40} className="rounded-lg" />
+          <Image src="/logo.png" alt="Navigator Logo" width={120} height={120} className="rounded-lg" />
         </div>
       </SidebarHeader>
       <SidebarContent className="p-2">
