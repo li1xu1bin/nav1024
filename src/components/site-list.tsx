@@ -31,7 +31,7 @@ export function SiteList({websites, categories}: SiteListProps) {
     <div className="space-y-10">
       {categoriesWithSites.map((category) => (
         <section key={category.id} id={category.id}>
-          <h2 className="text-2xl font-bold font-headline mb-4 pb-2 border-b-2 border-primary/20">
+          <h2 className="text-2xl font-bold font-headline mb-4">
             {category.name}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
