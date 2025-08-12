@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {
   SidebarProvider,
   Sidebar,
@@ -11,6 +11,8 @@ import {SidebarNav} from '@/components/sidebar-nav';
 import {SearchBar} from '@/components/search-bar';
 import {SiteList} from '@/components/site-list';
 import type {Website, Category} from '@/lib/data';
+import { Button } from '@/components/ui/button';
+import { ArrowUp } from 'lucide-react';
 
 type NavigatorClientProps = {
   websites: Website[];
@@ -22,10 +24,28 @@ export function NavigatorClient({
   categories,
 }: NavigatorClientProps) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleCategoryClick = (categoryId: string) => {
     if (categoryId === 'All') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      scrollToTop();
       return;
     }
     const element = document.getElementById(categoryId);
@@ -51,7 +71,26 @@ export function NavigatorClient({
       </Sidebar>
       <SidebarInset>
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
-          <header className="flex items-center justify-center mb-8 relative">
+          <header className="flex flex-col items-center justify-center mb-8 relative">
+             <div className="mb-6 flex items-center gap-3">
+               <div className="p-3 rounded-lg bg-primary text-primary-foreground">
+                 <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-navigation"
+                >
+                  <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                </svg>
+               </div>
+                <h1 className="text-3xl font-bold font-headline text-foreground">Navigator</h1>
+            </div>
             <div className="w-full max-w-md">
               <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div>
@@ -61,6 +100,16 @@ export function NavigatorClient({
           </header>
           <SiteList websites={filteredWebsites} categories={categories} />
         </main>
+        {showBackToTop && (
+          <Button
+            size="icon"
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 rounded-full shadow-lg"
+          >
+            <ArrowUp className="h-5 w-5" />
+            <span className="sr-only">Back to Top</span>
+          </Button>
+        )}
       </SidebarInset>
     </SidebarProvider>
   );
