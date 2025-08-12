@@ -9,18 +9,24 @@ import {
 } from '@/components/ui/sidebar';
 import type {Category} from '@/lib/data';
 import {Home} from 'lucide-react';
+import {useState} from 'react';
 
 type SidebarNavProps = {
   categories: Category[];
-  activeCategory: string;
-  setActiveCategory: (category: string) => void;
+  onCategoryClick: (categoryId: string) => void;
 };
 
 export function SidebarNav({
   categories,
-  activeCategory,
-  setActiveCategory,
+  onCategoryClick,
 }: SidebarNavProps) {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const handleClick = (categoryId: string, categoryName: string) => {
+    setActiveCategory(categoryName);
+    onCategoryClick(categoryId);
+  };
+
   return (
     <>
       <SidebarHeader>
@@ -48,7 +54,7 @@ export function SidebarNav({
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              onClick={() => setActiveCategory('All')}
+              onClick={() => handleClick('All', 'All')}
               isActive={activeCategory === 'All'}
               className="w-full justify-start"
               tooltip="All Categories"
@@ -60,7 +66,7 @@ export function SidebarNav({
           {categories.map((category) => (
             <SidebarMenuItem key={category.id}>
               <SidebarMenuButton
-                onClick={() => setActiveCategory(category.name)}
+                onClick={() => handleClick(category.id, category.name)}
                 isActive={activeCategory === category.name}
                 className="w-full justify-start"
                 tooltip={category.name}
