@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, FormEvent } from 'react';
+import { useState, useRef, FormEvent, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
@@ -45,9 +45,10 @@ export function SearchBar() {
     }
   };
   
-  useState(() => {
+  useEffect(() => {
+    // We need to wait for the buttons to be rendered before we can get their position
     setTimeout(() => updateArrowPosition('google'), 100);
-  });
+  }, []);
 
   const handleEngineChange = (engine: SearchEngine) => {
     setSelectedEngine(engine);
@@ -71,11 +72,12 @@ export function SearchBar() {
       </form>
       <div className="relative mt-4 flex justify-center items-center gap-8" ref={(el) => {
         if (el) {
+            // Get all button elements that are direct children of the container
             buttonsRef.current = Array.from(el.children).filter(child => child.tagName === 'BUTTON') as HTMLButtonElement[];
         }
       }}>
         <div 
-          className="absolute -top-2 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-primary transition-all duration-300 ease-in-out"
+          className="absolute -top-2 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-primary transition-all duration-300 ease-in-out rotate-180"
           style={arrowStyle}
         />
         {searchEngines.map(({ id, name }) => (
