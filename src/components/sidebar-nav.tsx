@@ -31,9 +31,8 @@ export function SidebarNav({
   return (
     <>
       <SidebarHeader>
-        <div className="flex items-center gap-3 px-3 py-4">
-          <Image src="/logo.png" alt="Navigator Logo" width={32} height={32} className="rounded-lg" />
-          <h1 className="text-xl font-bold font-headline">Navigator</h1>
+        <div className="flex items-center justify-center gap-3 px-3 py-4">
+          <Image src="/logo.png" alt="Navigator Logo" width={40} height={40} className="rounded-lg" />
         </div>
       </SidebarHeader>
       <SidebarContent className="p-2">

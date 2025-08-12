@@ -74,8 +74,7 @@ export function NavigatorClient({
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <header className="flex flex-col items-center justify-center mb-8 relative">
              <div className="mb-6 flex items-center gap-3">
-                <Image src="/logo.png" alt="Navigator Logo" width={40} height={40} className="rounded-lg" />
-                <h1 className="text-3xl font-bold font-headline text-foreground">Navigator</h1>
+                <Image src="/logo.png" alt="Navigator Logo" width={60} height={60} className="rounded-lg" />
             </div>
             <div className="w-full max-w-md">
               <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
