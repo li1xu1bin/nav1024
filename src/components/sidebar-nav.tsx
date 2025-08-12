@@ -8,7 +8,6 @@ import {
   SidebarMenuButton,
 } from '@/components/ui/sidebar';
 import type {Category} from '@/lib/data';
-import {Home} from 'lucide-react';
 import {useState} from 'react';
 import Image from 'next/image';
 
@@ -31,23 +30,15 @@ export function SidebarNav({
   return (
     <>
       <SidebarHeader>
-        <div className="flex items-center justify-center gap-3 px-3 py-4">
+        <div 
+          className="flex cursor-pointer items-center justify-center gap-3 px-3 py-4"
+          onClick={() => handleClick('All', 'All')}
+        >
           <Image src="/logo.png" alt="Navigator Logo" width={120} height={120} className="rounded-lg" />
         </div>
       </SidebarHeader>
       <SidebarContent className="p-2">
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton
-              onClick={() => handleClick('All', 'All')}
-              isActive={activeCategory === 'All'}
-              className="w-full justify-start"
-              tooltip="All Categories"
-            >
-              <Home className="h-4 w-4" />
-              <span>All</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
           {categories.map((category) => (
             <SidebarMenuItem key={category.id}>
               <SidebarMenuButton
