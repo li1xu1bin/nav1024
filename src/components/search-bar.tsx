@@ -70,14 +70,14 @@ export function SearchBar() {
           <span className="sr-only">Search</span>
         </Button>
       </form>
-      <div className="relative mt-4 flex justify-center items-center gap-8" ref={(el) => {
+      <div className="relative mt-8 flex justify-center items-center gap-8" ref={(el) => {
         if (el) {
             // Get all button elements that are direct children of the container
             buttonsRef.current = Array.from(el.children).filter(child => child.tagName === 'BUTTON') as HTMLButtonElement[];
         }
       }}>
         <div 
-          className="absolute -bottom-2 w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-primary transition-all duration-300 ease-in-out"
+          className="absolute -top-3 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-primary transition-all duration-300 ease-in-out"
           style={arrowStyle}
         />
         {searchEngines.map(({ id, name }) => (
