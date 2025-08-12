@@ -13,6 +13,7 @@ import {SiteList} from '@/components/site-list';
 import type {Website, Category} from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { ArrowUp } from 'lucide-react';
+import { AiSuggestions } from './ai-suggestions';
 
 type NavigatorClientProps = {
   websites: Website[];
