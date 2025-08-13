@@ -184,7 +184,7 @@ export const websites: Website[] = [
       '新一代AI Bot开发平台，快速搭建你的专属Bot',
     url: 'https://space.coze.cn',
     category: 'AI开发平台',
-    icon: 'Bot',
+    imageUrl: '/coze-icon.png',
   },
   {
     id: 'nocode-platform',
@@ -193,7 +193,7 @@ export const websites: Website[] = [
       'Build powerful apps without code.',
     url: 'https://www.bubble.io',
     category: 'AI开发平台',
-    icon: 'Layers',
+    imageUrl: '/nocode-icon.png',
   },
   {
     id: 'techcrunch',
