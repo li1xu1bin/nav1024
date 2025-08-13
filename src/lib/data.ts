@@ -1,42 +1,3 @@
-import type {ElementType} from 'react';
-import {
-  LayoutTemplate,
-  MessageSquare,
-  FolderKanban,
-  BrainCircuit,
-  Newspaper,
-  Twitter,
-  Github,
-  Mail,
-  Video,
-  BookOpen,
-  ShoppingBag,
-  Palette,
-  Code2,
-  type LucideIcon,
-  Bot,
-  Layers,
-} from 'lucide-react';
-
-export const icons = {
-  LayoutTemplate,
-  MessageSquare,
-  FolderKanban,
-  BrainCircuit,
-  Newspaper,
-  Twitter,
-  Github,
-  Mail,
-  Video,
-  BookOpen,
-  ShoppingBag,
-  Palette,
-  Code2,
-  Bot,
-  Layers,
-} as const;
-
-export type IconName = keyof typeof icons;
 
 export type Website = {
   id: string;
@@ -44,7 +5,6 @@ export type Website = {
   description: string;
   url: string;
   category: string;
-  icon?: IconName;
   imageUrl?: string;
 };
 
