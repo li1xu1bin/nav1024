@@ -1,10 +1,10 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
-import {Toaster} from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'NAV1024工具站',
-  description: 'Your personal navigation page',
+  description: '个人AI工具站',
   icons: {
     icon: '/favicon.ico',
   },
