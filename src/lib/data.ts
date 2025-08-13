@@ -199,7 +199,7 @@ export const websites: Website[] = [
     title: 'Clipdrop',
     description: 'StabilityAI推出的AI图片处理系列工具',
     url: 'https://clipdrop.co',
-    category: 'AI设计工具',
+    category: '图片处理工具',
     imageUrl: '/clipdrop-icon.png'
   },
   {
