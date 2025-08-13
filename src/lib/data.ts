@@ -91,6 +91,30 @@ export const websites: Website[] = [
     imageUrl: '/deepseek-icon.png',
   },
   {
+    id: 'kimi',
+    title: 'Kimi',
+    description: 'Kimi是月之暗面(Moonshot AI)推出的一款智能助手',
+    url: 'https://kimi.moonshot.cn/',
+    category: 'AI对话',
+    imageUrl: '/kimi-icon.png'
+  },
+  {
+    id: 'yuanbao',
+    title: '腾讯元宝',
+    description: '腾讯出品的AI智能助手',
+    url: 'https://yuanbao.tencent.com/',
+    category: 'AI对话',
+    imageUrl: '/yuanbao-icon.png'
+  },
+  {
+    id: 'tongyi',
+    title: '通义',
+    description: '阿里出品的AI智能助手',
+    url: 'https://tongyi.aliyun.com/',
+    category: 'AI对话',
+    imageUrl: '/tongyi-icon.png'
+  },
+  {
     id: 'jimeng',
     title: '即梦',
     description:
