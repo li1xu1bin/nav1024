@@ -89,6 +89,14 @@ export const websites: Website[] = [
     imageUrl: '/jimeng-logo-1.png',
   },
   {
+    id: 'roboneo',
+    title: 'RoboNeo',
+    description: '美图推出的图像设计AI Agent',
+    url: 'https://www.roboneo.com/home',
+    category: 'AI图像',
+    imageUrl: '/roboneo-icon.png'
+  },
+  {
     id: 'stablediffusion',
     title: 'Stable Diffusion',
     description:
@@ -105,14 +113,6 @@ export const websites: Website[] = [
     url: 'https://www.midjourney.com/',
     category: 'AI图像',
     imageUrl: '/midjourney-icon.png',
-  },
-  {
-    id: 'roboneo',
-    title: 'RoboNeo',
-    description: 'AI驱动的3D内容创作平台',
-    url: 'https://www.roboneo.com/home',
-    category: 'AI图像',
-    imageUrl: '/roboneo-icon.png'
   },
   {
     id: 'cursor',
