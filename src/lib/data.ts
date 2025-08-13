@@ -14,6 +14,8 @@ import {
   Palette,
   Code2,
   type LucideIcon,
+  Bot,
+  Layers,
 } from 'lucide-react';
 
 export const icons = {
@@ -30,6 +32,8 @@ export const icons = {
   ShoppingBag,
   Palette,
   Code2,
+  Bot,
+  Layers,
 } as const;
 
 export type IconName = keyof typeof icons;
@@ -53,7 +57,7 @@ export const categories: Category[] = [
   {id: 'ai-chat', name: 'AI对话'},
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-programming', name: 'AI编程'},
-  {id: 'social', name: 'Social'},
+  {id: 'ai-dev-platform', name: 'AI开发平台'},
   {id: 'news', name: 'News'},
 ];
 
@@ -174,31 +178,22 @@ export const websites: Website[] = [
     imageUrl: '/v0-icon.png'
   },
   {
-    id: 'twitter',
-    title: 'X (Twitter)',
+    id: 'coze',
+    title: '扣子空间',
     description:
-      'From breaking news and entertainment to sports and politics, get the full story with all the live commentary.',
-    url: 'https://twitter.com',
-    category: 'Social',
-    icon: 'Twitter',
+      '新一代AI Bot开发平台，快速搭建你的专属Bot',
+    url: 'https://space.coze.cn',
+    category: 'AI开发平台',
+    icon: 'Bot',
   },
   {
-    id: 'youtube',
-    title: 'YouTube',
+    id: 'nocode-platform',
+    title: 'NoCode',
     description:
-      'Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.',
-    url: 'https://youtube.com',
-    category: 'Social',
-    icon: 'Video',
-  },
-  {
-    id: 'gmail',
-    title: 'Gmail',
-    description:
-      'Gmail is email that’s intuitive, efficient, and useful. 15 GB of storage, less spam, and mobile access.',
-    url: 'https://mail.google.com',
-    category: 'Social',
-    icon: 'Mail',
+      'Build powerful apps without code.',
+    url: 'https://www.bubble.io',
+    category: 'AI开发平台',
+    icon: 'Layers',
   },
   {
     id: 'techcrunch',
