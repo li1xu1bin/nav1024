@@ -18,7 +18,8 @@ export const categories: Category[] = [
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-programming', name: 'AI编程'},
   {id: 'ai-dev-platform', name: 'AI开发平台'},
-  {id: 'ai-design', name: 'AI设计工具'},
+  {id: 'ai-design-tool', name: 'AI设计工具'},
+  {id: 'image-processing', name: '图片处理工具'},
 ];
 
 export const websites: Website[] = [
@@ -170,5 +171,21 @@ export const websites: Website[] = [
     url: 'https://clipdrop.co',
     category: 'AI设计工具',
     imageUrl: '/clipdrop-icon.png'
+  },
+  {
+    id: 'tinypng',
+    title: 'TinyPNG',
+    description: '在线图片压缩工具',
+    url: 'https://tinypng.com/',
+    category: '图片处理工具',
+    imageUrl: '/tinypng-icon.png',
+  },
+  {
+    id: 'imageresizer',
+    title: 'ImageResizer',
+    description: '在线图片大小调整工具',
+    url: 'https://imageresizer.com/',
+    category: '图片处理工具',
+    imageUrl: '/imageresizer-icon.png',
   }
 ];
