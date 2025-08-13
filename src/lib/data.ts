@@ -195,6 +195,20 @@ export const websites: Website[] = [
     imageUrl: '/motiff-icon.png'
   },
   {
+    id: 'figma-ai',
+    title: 'Figma AI',
+    description: 'Figma推出的原生AI设计工具',
+    url: 'https://www.figma.com/ai/',
+    category: 'AI设计工具',
+  },
+  {
+    id: 'mastergo-ai',
+    title: 'MasterGo AI',
+    description: 'MasterGo推出的智能UI设计助手',
+    url: 'https://mastergo.com/',
+    category: 'AI设计工具',
+  },
+  {
     id: 'clipdrop',
     title: 'Clipdrop',
     description: 'StabilityAI推出的AI图片处理系列工具',
