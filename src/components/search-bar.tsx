@@ -30,7 +30,7 @@ export function SearchBar() {
       window.open(searchUrl, '_blank');
     }
   };
-  
+
   const updateArrowPosition = (engine: SearchEngine) => {
     const index = searchEngines.findIndex(e => e.id === engine);
     const button = buttonsRef.current[index];
@@ -44,7 +44,7 @@ export function SearchBar() {
       });
     }
   };
-  
+
   useEffect(() => {
     // We need to wait for the buttons to be rendered before we can get their position
     setTimeout(() => updateArrowPosition('google'), 100);
@@ -60,23 +60,23 @@ export function SearchBar() {
       <form onSubmit={handleSearch} className="relative flex w-full items-center">
         <Input
           type="search"
-          placeholder="Search the web..."
+          placeholder="开始搜索"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full bg-card h-12 pr-12 text-base"
         />
         <Button type="submit" size="icon" className="absolute right-1.5 top-1/2 -translate-y-1/2 h-9 w-9">
           <Search className="h-5 w-5" />
-          <span className="sr-only">Search</span>
+          <span className="sr-only">搜索</span>
         </Button>
       </form>
-      <div className="relative mt-8 flex justify-center items-center gap-8" ref={(el) => {
+      <div className="relative mt-6 flex justify-center items-center gap-8" ref={(el) => {
         if (el) {
-            // Get all button elements that are direct children of the container
-            buttonsRef.current = Array.from(el.children).filter(child => child.tagName === 'BUTTON') as HTMLButtonElement[];
+          // Get all button elements that are direct children of the container
+          buttonsRef.current = Array.from(el.children).filter(child => child.tagName === 'BUTTON') as HTMLButtonElement[];
         }
       }}>
-        <div 
+        <div
           className="absolute -top-2 w-0 h-0 border-x-8 border-x-transparent border-b-8 border-b-primary transition-all duration-300 ease-in-out"
           style={arrowStyle}
         />

@@ -65,7 +65,7 @@ export const websites: Website[] = [
   {
     id: 'chatgpt',
     title: 'ChatGPT',
-    description: 'A powerful language model by OpenAI for conversations.',
+    description: 'OpenAI推出的AI智能助手',
     url: 'https://chat.openai.com/',
     category: 'AI对话',
     imageUrl: '/chatgpt-icon.png',
@@ -73,7 +73,7 @@ export const websites: Website[] = [
   {
     id: 'doubao',
     title: '豆包',
-    description: 'An AI chatbot from ByteDance.',
+    description: '字节跳动推出的AI智能助手',
     url: 'https://www.doubao.com/',
     category: 'AI对话',
     imageUrl: '/doubao-icon.png',
@@ -81,7 +81,7 @@ export const websites: Website[] = [
   {
     id: 'gemini',
     title: 'Gemini',
-    description: 'Google\'s largest and most capable AI model.',
+    description: 'Google推出的AI智能助手',
     url: 'https://gemini.google.com/',
     category: 'AI对话',
     imageUrl: '/gemini-icon.png',
@@ -89,7 +89,7 @@ export const websites: Website[] = [
   {
     id: 'deepseek',
     title: 'DeepSeek',
-    description: 'An advanced AI model for code generation and more.',
+    description: '深度求索推出的AI智能助手',
     url: 'https://www.deepseek.com/',
     category: 'AI对话',
     imageUrl: '/deepseek-icon.png',
@@ -97,7 +97,7 @@ export const websites: Website[] = [
   {
     id: 'kimi',
     title: 'Kimi',
-    description: 'Kimi是月之暗面(Moonshot AI)推出的一款智能助手',
+    description: '月之暗面推出的AI智能助手',
     url: 'https://kimi.moonshot.cn/',
     category: 'AI对话',
     imageUrl: '/kimi-icon.png'
@@ -105,7 +105,7 @@ export const websites: Website[] = [
   {
     id: 'yuanbao',
     title: '腾讯元宝',
-    description: '腾讯出品的AI智能助手',
+    description: '腾讯推出的AI智能助手',
     url: 'https://yuanbao.tencent.com/',
     category: 'AI对话',
     imageUrl: '/yuanbao-icon.png'
@@ -113,7 +113,7 @@ export const websites: Website[] = [
   {
     id: 'tongyi',
     title: '通义',
-    description: '阿里出品的AI智能助手',
+    description: '阿里推出的AI智能助手',
     url: 'https://tongyi.aliyun.com/',
     category: 'AI对话',
     imageUrl: '/tongyi-icon.png'
@@ -122,8 +122,8 @@ export const websites: Website[] = [
     id: 'jimeng',
     title: '即梦',
     description:
-      'AI-powered image generation service for creating stunning visuals.',
-    url: 'https://jimeng.ai/',
+      '抖音旗下免费AI图片创作工具',
+    url: 'https://jimeng.jianying.com/',
     category: 'AI图像',
     imageUrl: '/jimeng-logo-1.png',
   },
@@ -131,7 +131,7 @@ export const websites: Website[] = [
     id: 'stablediffusion',
     title: 'Stable Diffusion',
     description:
-      'A powerful open-source text-to-image model by Stability AI.',
+      'StabilityAI推出的文本到图像生成AI',
     url: 'https://stability.ai/',
     category: 'AI图像',
     imageUrl: '/stability-ai-icon.png',
@@ -140,7 +140,7 @@ export const websites: Website[] = [
     id: 'midjourney',
     title: 'Midjourney',
     description:
-      'An independent research lab exploring new mediums of thought and expanding the imaginative powers of the human species.',
+      'AI图像和插画生成工具',
     url: 'https://www.midjourney.com/',
     category: 'AI图像',
     imageUrl: '/midjourney-icon.png',
@@ -148,67 +148,59 @@ export const websites: Website[] = [
   {
     id: 'cursor',
     title: 'Cursor',
-    description: 'The AI-first code editor.',
+    description: 'Anysphere推出的AI代码编辑器',
     url: 'https://cursor.sh/',
     category: 'AI编程',
-    imageUrl: '/cursor-icon.png',
+    imageUrl: '/cursor-logo.png',
   },
   {
-    id: 'codegpt',
-    title: 'CodeGpt',
-    description: 'AI pair programmer for busy developers.',
-    url: 'https://codegpt.co/',
+    id: 'trae',
+    title: 'Trae',
+    description: '字节跳动推出的AI编程工具',
+    url: 'https://www.trae.cn',
     category: 'AI编程',
-    imageUrl: '/codegpt-icon.png',
-  },
-  {
-    id: 'codeium',
-    title: 'Codeium',
-    description: 'The modern coding superpower.',
-    url: 'https://codeium.com/',
-    category: 'AI编程',
-    imageUrl: '/codeium-icon.png',
+    imageUrl: '/trae.ai-logo.png',
   },
   {
     id: 'v0',
     title: 'v0.dev',
-    description: 'Generate UI with simple text prompts.',
+    description: 'Vercel推出的AI全栈应用构建工具',
     url: 'https://v0.dev',
     category: 'AI编程',
-    imageUrl: '/v0-icon.png'
+    imageUrl: '/v0.app-logo.png'
   },
   {
     id: 'coze',
     title: '扣子空间',
     description:
-      '新一代AI Bot开发平台，快速搭建你的专属Bot',
+      '字节跳动推出的零代码AI应用开发平台',
     url: 'https://space.coze.cn',
     category: 'AI开发平台',
-    imageUrl: '/coze-icon.png',
+    imageUrl: '/coze-ai-icon.png',
   },
   {
     id: 'nocode-platform',
     title: 'NoCode',
     description:
-      'Build powerful apps without code.',
-    url: 'https://www.bubble.io',
+      '美团推出的零代码AI应用开发平台',
+    url: 'https://nocode.cn/',
     category: 'AI开发平台',
-    imageUrl: '/nocode-icon.png',
+    imageUrl: '/nocode-logo.png',
   },
   {
     id: 'stitch',
     title: 'Stitch',
-    description: 'An AI-powered design tool for creating beautiful mockups.',
-    url: 'https://www.stitch.design/',
+    description: 'Google推出的AI原型设计工具',
+    url: 'https://stitch.withgoogle.com/',
     category: 'AI设计',
-    imageUrl: '/stitch-icon.png'
+    imageUrl: '/google-ai-icon.png'
   },
   {
     id: 'miaoduo',
     title: '妙多',
-    description: 'A creative platform for AI-assisted design and content creation.',
+    description: '猿辅导旗下推出的AI界面设计工具',
     url: 'https://www.miaoduo.com/',
     category: 'AI设计',
-    imageUrl: '/miaoduo-icon.png'
+    imageUrl: '/motiff-icon.png'
   }
 ];
