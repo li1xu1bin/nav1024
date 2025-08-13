@@ -20,6 +20,7 @@ export const categories: Category[] = [
   {id: 'ai-dev-platform', name: 'AI开发平台'},
   {id: 'ai-design-tool', name: 'AI设计工具'},
   {id: 'image-processing', name: '图片处理工具'},
+  {id: 'website-hosting', name: '网站托管工具'},
 ];
 
 export const websites: Website[] = [
@@ -241,5 +242,19 @@ export const websites: Website[] = [
     description: '在线图片大小调整工具',
     url: 'https://imageresizer.com/',
     category: '图片处理工具',
+  },
+  {
+    id: 'github',
+    title: 'GitHub',
+    description: '全球领先的软件开发和版本控制平台',
+    url: 'https://github.com/',
+    category: '网站托管工具',
+  },
+  {
+    id: 'vercel',
+    title: 'Vercel',
+    description: '为前端开发者提供的网站托管和部署平台',
+    url: 'https://vercel.com/',
+    category: '网站托管工具',
   }
 ];
