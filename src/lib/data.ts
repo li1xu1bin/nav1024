@@ -139,6 +139,14 @@ export const websites: Website[] = [
     imageUrl: '/v0.app-logo.png'
   },
   {
+    id: 'gemini-code-assist',
+    title: 'Gemini Code Assist',
+    description: 'Google推出的AI编程辅助工具',
+    url: 'https://codeassist.google/',
+    category: 'AI编程',
+    imageUrl: '/gemini-icon.png',
+  },
+  {
     id: 'coze',
     title: '扣子空间',
     description:
