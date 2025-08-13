@@ -58,7 +58,7 @@ export const categories: Category[] = [
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-programming', name: 'AI编程'},
   {id: 'ai-dev-platform', name: 'AI开发平台'},
-  {id: 'ai-design', name: 'AI设计'},
+  {id: 'ai-design', name: 'AI设计工具'},
 ];
 
 export const websites: Website[] = [
@@ -192,7 +192,7 @@ export const websites: Website[] = [
     title: 'Stitch',
     description: 'Google推出的AI原型设计工具',
     url: 'https://stitch.withgoogle.com/',
-    category: 'AI设计',
+    category: 'AI设计工具',
     imageUrl: '/google-ai-icon.png'
   },
   {
@@ -200,7 +200,15 @@ export const websites: Website[] = [
     title: '妙多',
     description: '猿辅导旗下推出的AI界面设计工具',
     url: 'https://www.miaoduo.com/',
-    category: 'AI设计',
+    category: 'AI设计工具',
     imageUrl: '/motiff-icon.png'
+  },
+  {
+    id: 'clipdrop',
+    title: 'Clipdrop',
+    description: 'StabilityAI推出的AI图片处理系列工具',
+    url: 'https://clipdrop.co',
+    category: 'AI设计工具',
+    imageUrl: '/clipdrop-icon.png'
   }
 ];
