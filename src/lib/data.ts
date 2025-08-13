@@ -186,7 +186,6 @@ export const websites: Website[] = [
     description: '在线图片压缩工具',
     url: 'https://tinypng.com/',
     category: '图片处理工具',
-    imageUrl: 'https://placehold.co/48x48.png',
   },
   {
     id: 'imageresizer',
