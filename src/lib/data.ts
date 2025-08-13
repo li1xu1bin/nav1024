@@ -52,7 +52,7 @@ export type Category = {
 export const categories: Category[] = [
   {id: 'productivity', name: '常用'},
   {id: 'ai-image', name: 'AI图像'},
-  {id: 'development', name: 'Development'},
+  {id: 'ai-programming', name: 'AI编程'},
   {id: 'social', name: 'Social'},
   {id: 'news', name: 'News'},
 ];
@@ -118,22 +118,28 @@ export const websites: Website[] = [
     imageUrl: '/midjourney-icon.png',
   },
   {
-    id: 'github',
-    title: 'GitHub',
-    description:
-      'Where the world builds software. Millions of developers and companies build, ship, and maintain their software on GitHub.',
-    url: 'https://github.com',
-    category: 'Development',
-    icon: 'Github',
+    id: 'cursor',
+    title: 'Cursor',
+    description: 'The AI-first code editor.',
+    url: 'https://cursor.sh/',
+    category: 'AI编程',
+    imageUrl: '/cursor-icon.png',
   },
   {
-    id: 'vscode',
-    title: 'VS Code',
-    description:
-      'Code editing. Redefined. Free. Built on open source. Runs everywhere.',
-    url: 'https://code.visualstudio.com/',
-    category: 'Development',
-    icon: 'Code2',
+    id: 'codegpt',
+    title: 'CodeGpt',
+    description: 'AI pair programmer for busy developers.',
+    url: 'https://codegpt.co/',
+    category: 'AI编程',
+    imageUrl: '/codegpt-icon.png',
+  },
+  {
+    id: 'codeium',
+    title: 'Codeium',
+    description: 'The modern coding superpower.',
+    url: 'https://codeium.com/',
+    category: 'AI编程',
+    imageUrl: '/codeium-icon.png',
   },
   {
     id: 'twitter',
