@@ -107,6 +107,14 @@ export const websites: Website[] = [
     imageUrl: '/midjourney-icon.png',
   },
   {
+    id: 'roboneo',
+    title: 'RoboNeo',
+    description: 'AI驱动的3D内容创作平台',
+    url: 'https://www.roboneo.com/home',
+    category: 'AI图像',
+    imageUrl: '/roboneo-icon.png'
+  },
+  {
     id: 'cursor',
     title: 'Cursor',
     description: 'Anysphere推出的AI代码编辑器',
