@@ -166,6 +166,14 @@ export const websites: Website[] = [
     imageUrl: '/codeium-icon.png',
   },
   {
+    id: 'v0',
+    title: 'v0.dev',
+    description: 'Generate UI with simple text prompts.',
+    url: 'https://v0.dev',
+    category: 'AI编程',
+    imageUrl: '/v0-icon.png'
+  },
+  {
     id: 'twitter',
     title: 'X (Twitter)',
     description:
