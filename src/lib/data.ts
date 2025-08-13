@@ -249,6 +249,8 @@ export const websites: Website[] = [
     description: '全球领先的软件开发和版本控制平台',
     url: 'https://github.com/',
     category: '网站托管工具',
+    imageUrl: '/github-icon.png'
+
   },
   {
     id: 'vercel',
@@ -256,6 +258,8 @@ export const websites: Website[] = [
     description: '为前端开发者提供的网站托管和部署平台',
     url: 'https://vercel.com/',
     category: '网站托管工具',
+    imageUrl: '/vercel-icon.png'
+
   },
   {
     id: 'cloudflare',
