@@ -147,6 +147,20 @@ export const websites: Website[] = [
     imageUrl: '/gemini-icon.png',
   },
   {
+    id: 'codebuddy-ide',
+    title: 'CodeBuddy IDE',
+    description: '腾讯推出的全栈开发AI IDE',
+    url: 'https://www.codebuddy.ai/',
+    category: 'AI编程',
+  },
+  {
+    id: 'claude-code',
+    title: 'Claude Code',
+    description: 'Anthropic 推出的AI编程工具',
+    url: 'https://www.anthropic.com/claude-code',
+    category: 'AI编程',
+  },
+  {
     id: 'coze',
     title: '扣子空间',
     description:
