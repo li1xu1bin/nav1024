@@ -256,5 +256,12 @@ export const websites: Website[] = [
     description: '为前端开发者提供的网站托管和部署平台',
     url: 'https://vercel.com/',
     category: '网站托管工具',
+  },
+  {
+    id: 'cloudflare',
+    title: 'Cloudflare',
+    description: '全球网络云平台，提供安全、性能和可靠性服务',
+    url: 'https://www.cloudflare.com/',
+    category: '网站托管工具',
   }
 ];
