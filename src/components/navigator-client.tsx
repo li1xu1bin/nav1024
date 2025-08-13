@@ -65,8 +65,9 @@ export function NavigatorClient({
       <SidebarInset>
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <header className="flex flex-col items-center justify-center mb-16 relative">
-             <div className="mb-6 flex items-center gap-3">
+             <div className="mb-6 flex flex-col items-center gap-2">
                 <Image src="/logo.png" alt="Navigator Logo" width={180} height={180} className="rounded-lg" />
+                <p className="text-sm text-muted-foreground">收集最新最实用的AI网站工具</p>
             </div>
             <div className="w-full">
               <SearchBar />
