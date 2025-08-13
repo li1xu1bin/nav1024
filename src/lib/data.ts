@@ -50,7 +50,7 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  {id: 'productivity', name: '常用'},
+  {id: 'ai-chat', name: 'AI对话'},
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-programming', name: 'AI编程'},
   {id: 'social', name: 'Social'},
@@ -63,15 +63,15 @@ export const websites: Website[] = [
     title: 'ChatGPT',
     description: 'A powerful language model by OpenAI for conversations.',
     url: 'https://chat.openai.com/',
-    category: '常用',
-    icon: 'BrainCircuit',
+    category: 'AI对话',
+    imageUrl: '/chatgpt-icon.png',
   },
   {
     id: 'doubao',
     title: '豆包',
     description: 'An AI chatbot from ByteDance.',
     url: 'https://www.doubao.com/',
-    category: '常用',
+    category: 'AI对话',
     imageUrl: '/doubao-icon.png',
   },
   {
@@ -79,16 +79,16 @@ export const websites: Website[] = [
     title: 'Gemini',
     description: 'Google\'s largest and most capable AI model.',
     url: 'https://gemini.google.com/',
-    category: '常用',
-    icon: 'BrainCircuit',
+    category: 'AI对话',
+    imageUrl: '/gemini-icon.png',
   },
   {
     id: 'deepseek',
     title: 'DeepSeek',
     description: 'An advanced AI model for code generation and more.',
     url: 'https://www.deepseek.com/',
-    category: '常用',
-    icon: 'BrainCircuit',
+    category: 'AI对话',
+    imageUrl: '/deepseek-icon.png',
   },
   {
     id: 'jimeng',
