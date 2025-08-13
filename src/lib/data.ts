@@ -179,6 +179,13 @@ export const websites: Website[] = [
     imageUrl: '/nocode-logo.png',
   },
   {
+    id: 'dify',
+    title: 'Dify',
+    description: '开源的大语言模型应用开发平台',
+    url: 'https://dify.ai/',
+    category: 'AI开发平台',
+  },
+  {
     id: 'stitch',
     title: 'Stitch',
     description: 'Google推出的AI原型设计工具',
