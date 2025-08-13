@@ -193,6 +193,5 @@ export const websites: Website[] = [
     description: '在线图片大小调整工具',
     url: 'https://imageresizer.com/',
     category: '图片处理工具',
-    imageUrl: '/imageresizer-icon.png',
   }
 ];
