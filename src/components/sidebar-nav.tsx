@@ -44,7 +44,7 @@ export function SidebarNav({
               <SidebarMenuButton
                 onClick={() => handleClick(category.id, category.name)}
                 isActive={activeCategory === category.name}
-                className="w-full justify-start"
+                className="w-full justify-center"
                 tooltip={category.name}
               >
                 <span>{category.name}</span>
