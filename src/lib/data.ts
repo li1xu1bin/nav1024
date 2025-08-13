@@ -106,7 +106,7 @@ export const websites: Website[] = [
       'A powerful open-source text-to-image model by Stability AI.',
     url: 'https://stability.ai/',
     category: 'AI图像',
-    icon: 'Palette',
+    imageUrl: '/stability-ai-icon.png',
   },
   {
     id: 'midjourney',
@@ -115,7 +115,7 @@ export const websites: Website[] = [
       'An independent research lab exploring new mediums of thought and expanding the imaginative powers of the human species.',
     url: 'https://www.midjourney.com/',
     category: 'AI图像',
-    icon: 'Palette',
+    imageUrl: '/midjourney-icon.png',
   },
   {
     id: 'github',
