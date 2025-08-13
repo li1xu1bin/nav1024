@@ -58,7 +58,7 @@ export const categories: Category[] = [
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-programming', name: 'AI编程'},
   {id: 'ai-dev-platform', name: 'AI开发平台'},
-  {id: 'news', name: 'News'},
+  {id: 'ai-design', name: 'AI设计'},
 ];
 
 export const websites: Website[] = [
@@ -196,21 +196,19 @@ export const websites: Website[] = [
     imageUrl: '/nocode-icon.png',
   },
   {
-    id: 'techcrunch',
-    title: 'TechCrunch',
-    description:
-      'TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news.',
-    url: 'https://techcrunch.com',
-    category: 'News',
-    icon: 'Newspaper',
+    id: 'stitch',
+    title: 'Stitch',
+    description: 'An AI-powered design tool for creating beautiful mockups.',
+    url: 'https://www.stitch.design/',
+    category: 'AI设计',
+    imageUrl: '/stitch-icon.png'
   },
   {
-    id: 'medium',
-    title: 'Medium',
-    description:
-      'Medium is an open platform where readers find dynamic thinking, and where expert and undiscovered voices can share their writing on any topic.',
-    url: 'https://medium.com',
-    category: 'News',
-    icon: 'BookOpen',
-  },
+    id: 'miaoduo',
+    title: '妙多',
+    description: 'A creative platform for AI-assisted design and content creation.',
+    url: 'https://www.miaoduo.com/',
+    category: 'AI设计',
+    imageUrl: '/miaoduo-icon.png'
+  }
 ];
