@@ -16,6 +16,7 @@ export type Category = {
 export const categories: Category[] = [
   {id: 'ai-chat', name: 'AI对话'},
   {id: 'ai-image', name: 'AI图像'},
+  {id: 'ai-video', name: 'AI视频'},
   {id: 'ai-programming', name: 'AI编程'},
   {id: 'ai-dev-platform', name: 'AI开发平台'},
   {id: 'ai-design-tool', name: 'AI设计工具'},
@@ -81,15 +82,6 @@ export const websites: Website[] = [
     imageUrl: '/tongyi-icon.png'
   },
   {
-    id: 'jimeng',
-    title: '即梦',
-    description:
-      '抖音旗下免费AI图片创作工具',
-    url: 'https://jimeng.jianying.com/',
-    category: 'AI图像',
-    imageUrl: '/jimeng-logo-1.png',
-  },
-  {
     id: 'roboneo',
     title: 'RoboNeo',
     description: '美图推出的图像设计AI Agent',
@@ -114,6 +106,22 @@ export const websites: Website[] = [
     url: 'https://www.midjourney.com/',
     category: 'AI图像',
     imageUrl: '/midjourney-icon.png',
+  },
+  {
+    id: 'jimeng',
+    title: '即梦',
+    description:
+      '抖音旗下免费AI图片创作工具',
+    url: 'https://jimeng.jianying.com/',
+    category: 'AI视频',
+    imageUrl: '/jimeng-logo-1.png',
+  },
+  {
+    id: 'keling',
+    title: '可灵',
+    description: '快手推出的AI图像和视频创作平台',
+    url: 'https://app.klingai.com/cn/',
+    category: 'AI视频',
   },
   {
     id: 'cursor',
