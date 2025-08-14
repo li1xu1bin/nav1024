@@ -174,7 +174,8 @@ export const websites: Website[] = [
     title: 'CodeBuddy IDE',
     description: '腾讯推出的全栈开发AI IDE',
     url: 'https://www.codebuddy.ai',
-    category: 'AI编程'
+    category: 'AI编程',
+    imageUrl: '/codebuddy-icon.png'
   },
   {
     id: 'claude-code',
