@@ -124,6 +124,20 @@ export const websites: Website[] = [
     category: 'AI视频',
   },
   {
+    id: 'pika',
+    title: 'Pika',
+    description: 'Pika Labs推出的AI视频生成和编辑工具',
+    url: 'https://pika.art/',
+    category: 'AI视频',
+  },
+  {
+    id: 'runway',
+    title: 'Runway',
+    description: 'AI视频工具，绿幕抠除、视频生成、动态捕捉等功能',
+    url: 'https://runwayml.com/',
+    category: 'AI视频',
+  },
+  {
     id: 'cursor',
     title: 'Cursor',
     description: 'Anysphere推出的AI代码编辑器',
@@ -157,19 +171,17 @@ export const websites: Website[] = [
   },
   {
     id: 'codebuddy-ide',
-    title: 'CodeBuddy',
-    description: '腾讯推出的AI智能编程伙伴',
-    url: 'https://copilot.tencent.com/',
-    category: 'AI编程',
-    imageUrl:'/CodeBuddy-logo.png'
+    title: 'CodeBuddy IDE',
+    description: '腾讯推出的全栈开发AI IDE',
+    url: 'https://www.codebuddy.ai',
+    category: 'AI编程'
   },
   {
     id: 'claude-code',
     title: 'Claude Code',
     description: 'Anthropic 推出的AI编程工具',
     url: 'https://www.anthropic.com/claude-code',
-    category: 'AI编程',
-    imageUrl:'/Claude-Code-logo1.png'
+    category: 'AI编程'
   },
   {
     id: 'coze',
@@ -195,7 +207,6 @@ export const websites: Website[] = [
     description: '开源的大语言模型应用开发平台',
     url: 'https://dify.ai/',
     category: 'AI开发平台',
-    imageUrl: '/Dify-logo.png',
   },
   {
     id: 'stitch',
@@ -219,7 +230,6 @@ export const websites: Website[] = [
     description: 'Figma推出的原生AI设计工具',
     url: 'https://www.figma.com/ai/',
     category: 'AI设计工具',
-    imageUrl: '/figma-icon.png'
   },
   {
     id: 'mastergo-ai',
@@ -227,7 +237,6 @@ export const websites: Website[] = [
     description: 'MasterGo推出的智能UI设计助手',
     url: 'https://mastergo.com/',
     category: 'AI设计工具',
-    imageUrl: '/mastergo-ai-icon.png'
   },
   {
     id: 'clipdrop',
@@ -257,8 +266,6 @@ export const websites: Website[] = [
     description: '全球领先的软件开发和版本控制平台',
     url: 'https://github.com/',
     category: '网站托管工具',
-    imageUrl: '/github-icon.png'
-
   },
   {
     id: 'vercel',
@@ -266,8 +273,6 @@ export const websites: Website[] = [
     description: '为前端开发者提供的网站托管和部署平台',
     url: 'https://vercel.com/',
     category: '网站托管工具',
-    imageUrl: '/vercel-icon.png'
-
   },
   {
     id: 'cloudflare',
