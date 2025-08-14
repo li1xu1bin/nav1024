@@ -82,6 +82,15 @@ export const websites: Website[] = [
     imageUrl: '/tongyi-icon.png'
   },
   {
+    id: 'jimeng',
+    title: '即梦',
+    description:
+      '抖音旗下免费AI图片视频创作工具',
+    url: 'https://jimeng.jianying.com/',
+    category: 'AI图像',
+    imageUrl: '/jimeng-logo-1.png',
+  },
+  {
     id: 'roboneo',
     title: 'RoboNeo',
     description: '美图推出的图像设计AI Agent',
@@ -111,7 +120,7 @@ export const websites: Website[] = [
     id: 'jimeng',
     title: '即梦',
     description:
-      '抖音旗下免费AI图片创作工具',
+      '抖音旗下免费AI图片视频创作工具',
     url: 'https://jimeng.jianying.com/',
     category: 'AI视频',
     imageUrl: '/jimeng-logo-1.png',
@@ -122,6 +131,23 @@ export const websites: Website[] = [
     description: '快手推出的AI图像和视频创作平台',
     url: 'https://app.klingai.com/cn/',
     category: 'AI视频',
+    imageUrl: '/klingai-logo.png',
+  },
+  {
+    id: 'pika',
+    title: 'Pika',
+    description: 'Pika Labs推出的AI视频生成和编辑工具',
+    url: 'https://pika.art/',
+    category: 'AI视频',
+    imageUrl: '/pika-icon.png',
+  },
+  {
+    id: 'runway',
+    title: 'Runway',
+    description: 'AI视频工具，绿幕抠除、视频生成、动态捕捉等功能',
+    url: 'https://runwayml.com/',
+    category: 'AI视频',
+    imageUrl: '/runwayml-icon.png',
   },
   {
     id: 'cursor',
