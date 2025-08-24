@@ -74,7 +74,7 @@ export function Timeline() {
                     className="rounded-md object-cover"
                   />
                 )}
-                <a href={event.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-900 dark:text-white hover:underline">
+                <a href={event.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-900 dark:text-white hover:underline hover:text-[#54A57C]">
                   {event.text}
                 </a>
               </div>

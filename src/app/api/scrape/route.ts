@@ -19,30 +19,17 @@ export async function GET() {
     const html = await response.text();
     const $ = cheerio.load(html);
 
-    const data = $('.cat_list .list-content').map((i, el) => {
+    const data = $('.cat_list .list-item').map((i, el) => {
       const element = $(el);
       const titleElement = element.find('.list-body a');
       // The user wants to debug this selector
-      const imageElement = element.find('.list-item .media .media-content');
+      const imageElement = element.find('a.media-content');
       let imageUrl = imageElement.attr('data-src');
 
       if (imageUrl && imageUrl.startsWith('/')) {
         imageUrl = `https://ai-bot.cn${imageUrl}`;
       }
 
-      // For the first item, include debug info
-      if (i === 0) {
-        return {
-          text: titleElement.text(),
-          href: titleElement.attr('href'),
-          imageUrl: imageUrl,
-          debug: {
-            selectorUsed: '.list-item .media .media-content',
-            foundElementHtml: imageElement.html(),
-            foundDataSrc: imageElement.attr('data-src'),
-          }
-        };
-      }
 
       return {
         text: titleElement.text(),
