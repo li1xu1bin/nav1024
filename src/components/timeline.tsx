@@ -4,6 +4,8 @@
 import React, { useState, useEffect } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
+import { ArrowUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface ScrapedData {
   text: string;
@@ -14,6 +16,7 @@ interface ScrapedData {
 export function Timeline() {
   const [data, setData] = useState<ScrapedData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +24,7 @@ export function Timeline() {
         setLoading(true);
         const response = await fetch('/api/scrape');
         const result = await response.json();
-        console.log('API Response with Debug Info:', result);
+        // console.log('API Response with Debug Info:', result);
         if (response.ok) {
           setData(result);
         } else {
@@ -37,12 +40,26 @@ export function Timeline() {
     };
 
     fetchData();
+
+    const handleScroll = () => {
+      if (window.pageYOffset > 300) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="p-6 sm:p-10 h-full w-full bg-white dark:bg-gray-900 rounded-lg">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white">最新动态</h2>
+        <button type="button" onClick={() => window.history.back()} className="bg-[#54A57C] text-white hover:bg-[#458B6C] font-medium py-2 px-4 rounded">
+          返回
+        </button>
       </div>
       <div className="relative border-l-2 border-gray-200 dark:border-gray-700">
         {loading ? (
@@ -82,6 +99,16 @@ export function Timeline() {
           ))
         )}
       </div>
+
+      {showScrollToTop && (
+        <Button
+          size="icon"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-8 right-8 rounded-full shadow-lg"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </Button>
+      )}
     </div>
   );
 }

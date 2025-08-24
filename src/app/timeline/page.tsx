@@ -29,14 +29,6 @@ export default function TimelinePage() {
       <SidebarInset>
         <PageTransition>
           <div className="p-4 sm:p-6 lg:p-8 relative">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-4 right-4"
-              onClick={() => router.back()}
-            >
-              <ChevronLeft className="h-6 w-6" />
-            </Button>
             <Timeline />
           </div>
         </PageTransition>
