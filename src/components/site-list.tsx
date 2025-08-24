@@ -1,3 +1,4 @@
+
 import type {Website, Category} from '@/lib/data';
 import {SiteCard} from './site-card';
 
@@ -44,3 +45,4 @@ export function SiteList({websites, categories}: SiteListProps) {
     </div>
   );
 }
+

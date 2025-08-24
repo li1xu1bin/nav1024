@@ -10,6 +10,7 @@ import {
 import type {Category} from '@/lib/data';
 import {useState} from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type SidebarNavProps = {
   categories: Category[];
@@ -39,6 +40,16 @@ export function SidebarNav({
       </SidebarHeader>
       <SidebarContent className="p-2">
         <SidebarMenu>
+          <SidebarMenuItem>
+            <Link href="/timeline" passHref>
+              <SidebarMenuButton
+                className="w-full justify-start"
+                tooltip="最新资讯"
+              >
+                <span>最新资讯</span>
+              </SidebarMenuButton>
+            </Link>
+          </SidebarMenuItem>
           {categories.map((category) => (
             <SidebarMenuItem key={category.id}>
               <SidebarMenuButton

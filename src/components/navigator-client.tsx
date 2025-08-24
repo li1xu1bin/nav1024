@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   SidebarProvider,
   Sidebar,
@@ -14,6 +15,8 @@ import type { Website, Category } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { ArrowUp } from 'lucide-react';
 import Image from 'next/image';
+import { PageTransition } from './page-transition';
+import cn from 'classnames'; // Use classnames for conditional classes
 
 type NavigatorClientProps = {
   websites: Website[];
@@ -25,6 +28,19 @@ export function NavigatorClient({
   categories,
 }: NavigatorClientProps) {
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const categoryId = searchParams.get('category');
+    if (categoryId) {
+      setTimeout(() => {
+        const element = document.getElementById(categoryId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300); // Delay to allow for page transition
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,14 +60,16 @@ export function NavigatorClient({
   };
 
   const handleCategoryClick = (categoryId: string) => {
-    if (categoryId === 'All') {
-      scrollToTop();
-      return;
-    }
-    const element = document.getElementById(categoryId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    setTimeout(() => {
+      if (categoryId === 'All') {
+        scrollToTop();
+        return;
+      }
+      const element = document.getElementById(categoryId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 300); // Delay scroll to allow flip animation
   };
 
   return (
@@ -63,21 +81,35 @@ export function NavigatorClient({
         />
       </Sidebar>
       <SidebarInset>
-        <main className="flex-1 p-4 sm:p-6 lg:p-8">
-          <header className="flex flex-col items-center justify-center mb-16 relative">
-            <div className="mb-6 flex flex-col items-center gap-2">
-              <Image src="/logo.png" alt="Navigator Logo" width={180} height={180} className="rounded-lg" />
-              <p className="text-sm text-muted-foreground">收集最新最实用的AI网站和工具</p>
+        <PageTransition>
+          <div className="p-4 sm:p-6 lg:p-8">
+            <div className="relative w-full h-full overflow-hidden">
+              {/* Main Content */}
+              <div
+                className={cn(
+                  'transition-transform duration-500 ease-in-out',
+                )}
+              >
+                <main className="flex-1">
+                  <header className="flex flex-col items-center justify-center mb-16 relative">
+                    <div className="mb-6 flex flex-col items-center gap-2 cursor-pointer">
+                      <Image src="/logo.png" alt="Navigator Logo" width={180} height={180} className={cn("rounded-lg")}/>
+                      <p className="text-sm text-muted-foreground">收集最新最实用的AI网站和工具</p>
+                    </div>
+                    <div className="w-full">
+                      <SearchBar />
+                    </div>
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                      <SidebarTrigger className="md:hidden" />
+                    </div>
+                  </header>
+                  <SiteList websites={websites} categories={categories} />
+                </main>
+              </div>
             </div>
-            <div className="w-full">
-              <SearchBar />
-            </div>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2">
-              <SidebarTrigger className="md:hidden" />
-            </div>
-          </header>
-          <SiteList websites={websites} categories={categories} />
-        </main>
+          </div>
+        </PageTransition>
+
         {showBackToTop && (
           <Button
             size="icon"
