@@ -63,7 +63,7 @@ export function Timeline() {
           返回
         </button>
       </div>
-      <div className="relative border-l-2 border-gray-200 dark:border-gray-700">
+      <div className={`relative ${isMobile ? '' : 'border-l-2 border-gray-200 dark:border-gray-700'}`}>
         {loading ? (
           Array.from({ length: 5 }).map((_, index) => (
             <div key={index} className="mb-10 ml-6 flex items-center gap-4">
@@ -76,20 +76,22 @@ export function Timeline() {
           ))
         ) : (
           data.map((event, index) => (
-            <div key={index} className="mb-10 ml-6">
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
-                  <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                </svg>
-              </span>
+            <div key={index} className={`mb-10 ${isMobile ? 'ml-2' : 'ml-6'}`}>
+              {!isMobile && (
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
+                    <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </span>
+              )}
               <div className="flex items-start gap-4">
                 {event.imageUrl && (
                   <Image
                     src={event.imageUrl}
                     alt={event.text}
-                    width={isMobile ? 120 : 160}
-                    height={isMobile ? 90 : 120}
+                    width={isMobile ? 80 : 160}
+                    height={isMobile ? 60 : 120}
                     className="rounded-md object-cover"
                   />
                 )}

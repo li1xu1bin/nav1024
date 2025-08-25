@@ -58,7 +58,7 @@ export function NewsTicker() {
           href={news[currentIndex].href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${isMobile ? 'text-sm' : 'text-lg'} text-gray-600 dark:text-gray-400 truncate px-3 w-full text-center hover:text-[#54A57C] block max-w-[80%]`}
+          className={`${isMobile ? 'text-sm' : 'text-lg'} text-gray-600 dark:text-gray-400 truncate px-3 w-full text-center hover:text-[#54A57C] block`}
         >
           {news[currentIndex].text}
         </a>
