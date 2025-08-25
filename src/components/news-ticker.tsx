@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface NewsItem {
   text: string;
@@ -11,7 +12,8 @@ interface NewsItem {
 export function NewsTicker() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const isMobile = useIsMobile();
+  
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -44,17 +46,19 @@ export function NewsTicker() {
   }
 
   return (
-    <div className="relative w-full overflow-hidden h-[60px] my-2 flex items-center rounded-lg bg-[#c4f1dacf] mb-8">
-      <div className="flex-shrink-0 text-lg text-gray-600 dark:text-gray-400 font-bold px-3">
-        最新动态
-      </div>
+    <div className={`relative overflow-hidden h-[60px] my-2 flex items-center rounded-lg bg-[#c4f1dacf] ${isMobile ? 'w-[calc(100vw-2rem)]' : 'w-full max-w-full mb-8'}`}>
+      {!isMobile && (
+        <div className="flex-shrink-0 text-lg text-gray-600 dark:text-gray-400 font-bold px-3">
+          最新动态
+        </div>
+      )}
       <div className="flex-grow overflow-hidden h-full flex items-center">
         <a
           key={currentIndex}
           href={news[currentIndex].href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg text-gray-600 dark:text-gray-400 truncate px-3 w-full text-center hover:text-[#54A57C] "
+          className="text-lg text-gray-600 dark:text-gray-400 truncate px-3 w-full text-center hover:text-[#54A57C] block max-w-[90%]"
         >
           {news[currentIndex].text}
         </a>

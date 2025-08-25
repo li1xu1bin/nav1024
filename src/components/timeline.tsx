@@ -6,6 +6,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
 import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface ScrapedData {
   text: string;
@@ -17,6 +18,7 @@ export function Timeline() {
   const [data, setData] = useState<ScrapedData[]>([]);
   const [loading, setLoading] = useState(true);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -86,8 +88,8 @@ export function Timeline() {
                   <Image
                     src={event.imageUrl}
                     alt={event.text}
-                    width={160}
-                    height={120}
+                    width={isMobile ? 120 : 160}
+                    height={isMobile ? 90 : 120}
                     className="rounded-md object-cover"
                   />
                 )}
