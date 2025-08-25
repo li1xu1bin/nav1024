@@ -87,13 +87,15 @@ export function Timeline() {
               )}
               <div className="flex items-start gap-4">
                 {event.imageUrl && (
-                  <Image
-                    src={event.imageUrl}
-                    alt={event.text}
-                    width={isMobile ? 80 : 160}
-                    height={isMobile ? 60 : 120}
-                    className="rounded-md object-cover"
-                  />
+                  <div className={`border border-gray-200 rounded-md p-1 flex-shrink-0 ${isMobile ? 'w-[80px] h-[60px]' : 'w-[160px] h-[120px]'}`}>
+                    <Image
+                      src={event.imageUrl}
+                      alt={event.text}
+                      width={isMobile ? 80 : 160}
+                      height={isMobile ? 60 : 120}
+                      className="rounded-md object-contain w-full h-full"
+                    />
+                  </div>
                 )}
                 <a href={event.href} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-900 dark:text-white hover:underline hover:text-[#54A57C]">
                   {event.text}
