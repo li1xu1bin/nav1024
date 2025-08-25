@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowUp } from 'lucide-react';
 import Image from 'next/image';
 import { PageTransition } from './page-transition';
+import { NewsTicker } from '@/components/news-ticker';
 import cn from 'classnames'; // Use classnames for conditional classes
 
 type NavigatorClientProps = {
@@ -91,7 +92,7 @@ export function NavigatorClient({
                 )}
               >
                 <main className="flex-1">
-                  <header className="flex flex-col items-center justify-center mb-16 relative">
+                  <header className="flex flex-col items-center justify-center mb-8 relative">
                     <div className="mb-6 flex flex-col items-center gap-2 cursor-pointer">
                       <Image src="/logo.png" alt="Navigator Logo" width={180} height={180} className={cn("rounded-lg")}/>
                       <p className="text-sm text-muted-foreground">收集最新最实用的AI网站和工具</p>
@@ -103,6 +104,7 @@ export function NavigatorClient({
                       <SidebarTrigger className="md:hidden" />
                     </div>
                   </header>
+                  <NewsTicker />
                   <SiteList websites={websites} categories={categories} />
                 </main>
               </div>
