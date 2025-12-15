@@ -15,9 +15,10 @@ export type Category = {
 
 export const categories: Category[] = [
   {id: 'ai-chat', name: 'AI对话'},
+  {id: 'ai-programming', name: 'AI编程'},
+  {id: 'ai-design', name: 'AI设计'},
   {id: 'ai-image', name: 'AI图像'},
   {id: 'ai-video', name: 'AI视频'},
-  {id: 'ai-programming', name: 'AI编程'},
   {id: 'ai-dev-platform', name: 'AI开发平台'},
   {id: 'ai-design-tool', name: 'AI设计工具'},
   {id: 'image-processing', name: '图片处理工具'},
@@ -25,14 +26,7 @@ export const categories: Category[] = [
 ];
 
 export const websites: Website[] = [
-  {
-    id: 'chatgpt',
-    title: 'ChatGPT',
-    description: 'OpenAI推出的AI智能助手',
-    url: 'https://chat.openai.com/',
-    category: 'AI对话',
-    imageUrl: '/chatgpt-icon.png',
-  },
+  
   {
     id: 'doubao',
     title: '豆包',
@@ -40,6 +34,38 @@ export const websites: Website[] = [
     url: 'https://www.doubao.com/',
     category: 'AI对话',
     imageUrl: '/doubao-icon.png',
+  },
+  {
+    id: 'deepseek',
+    title: 'DeepSeek',
+    description: '深度求索推出的AI智能助手',
+    url: 'https://chat.deepseek.com/',
+    category: 'AI对话',
+    imageUrl: '/deepseek-icon.png',
+  },
+  {
+    id: 'yuanbao',
+    title: '元宝',
+    description: '腾讯推出的AI智能助手',
+    url: 'https://yuanbao.tencent.com/',
+    category: 'AI对话',
+    imageUrl: '/yuanbao-icon.png'
+  },
+  {
+    id: 'tongyi',
+    title: '千问',
+    description: '阿里推出的AI智能助手',
+    url: 'https://www.qianwen.com/',
+    category: 'AI对话',
+    imageUrl: '/tongyi-icon.png'
+  },
+  {
+    id: 'chatgpt',
+    title: 'ChatGPT',
+    description: 'OpenAI推出的AI智能助手',
+    url: 'https://chat.openai.com/',
+    category: 'AI对话',
+    imageUrl:'/chatgpt-icon.png',
   },
   {
     id: 'gemini',
@@ -50,14 +76,6 @@ export const websites: Website[] = [
     imageUrl: '/gemini-icon.png',
   },
   {
-    id: 'deepseek',
-    title: 'DeepSeek',
-    description: '深度求索推出的AI智能助手',
-    url: 'https://www.deepseek.com/',
-    category: 'AI对话',
-    imageUrl: '/deepseek-icon.png',
-  },
-  {
     id: 'kimi',
     title: 'Kimi',
     description: '月之暗面推出的AI智能助手',
@@ -66,20 +84,36 @@ export const websites: Website[] = [
     imageUrl: '/kimi-icon.png'
   },
   {
-    id: 'yuanbao',
-    title: '腾讯元宝',
-    description: '腾讯推出的AI智能助手',
-    url: 'https://yuanbao.tencent.com/',
+    id: 'Grok',
+    title: 'Grok',
+    description: '马斯克旗下xAI推出的人工智能助手',
+    url: 'https://grok.com/',
     category: 'AI对话',
-    imageUrl: '/yuanbao-icon.png'
+    imageUrl: '/xai-icon.png'
   },
   {
-    id: 'tongyi',
-    title: '通义',
-    description: '阿里推出的AI智能助手',
-    url: 'https://tongyi.aliyun.com/',
-    category: 'AI对话',
-    imageUrl: '/tongyi-icon.png'
+    id: 'meitushejishi',
+    title: '美图设计室',
+    description:'AI图像创作和设计平台',
+    url: 'https://www.designkit.cn/',
+    category: 'AI设计',
+    imageUrl: '/meitu-ai-ppt.jpg',
+  },
+  {
+    id: 'modao',
+    title: '墨刀AI',
+    description:'AI产品原型设计助手',
+    url: 'https://modao.cc/feature/ai',
+    category: 'AI设计',
+    imageUrl: '/modao-icon.png',
+  },
+  {
+    id: 'duiyou',
+    title: '堆友AI',
+    description:'专为设计师打造的AI设计服务平台',
+    url: 'https://d.design/',
+    category: 'AI设计',
+    imageUrl: '/d-design-ai-icon.png',
   },
   {
     id: 'jimeng',
@@ -87,9 +121,20 @@ export const websites: Website[] = [
     description:
       '抖音旗下免费AI图片视频创作工具',
     url: 'https://jimeng.jianying.com/',
-    category: 'AI图像',
+    category: 'AI设计',
     imageUrl: '/jimeng-logo-1.png',
   },
+
+  {
+    id: 'Nano Banana',
+    title: 'Nano Banana',
+    description:
+      '谷歌推出的图像生成与编辑模型',
+    url: 'https://deepmind.google/models/gemini-image/pro/',
+    category: 'AI图像',
+    imageUrl: '/Nano-Banana-icon.png',
+  },
+  
   {
     id: 'roboneo',
     title: 'RoboNeo',
@@ -117,13 +162,13 @@ export const websites: Website[] = [
     imageUrl: '/midjourney-icon.png',
   },
   {
-    id: 'jimeng',
-    title: '即梦',
+    id: 'Sora',
+    title: 'Sora',
     description:
-      '抖音旗下免费AI图片视频创作工具',
-    url: 'https://jimeng.jianying.com/',
+      'OpenAI推出的AI视频生成模型',
+    url: 'https://sora.chatgpt.com/explore',
     category: 'AI视频',
-    imageUrl: '/jimeng-logo-1.png',
+    imageUrl: '/chatgpt-icon.png',
   },
   {
     id: 'keling',
@@ -164,6 +209,14 @@ export const websites: Website[] = [
     url: 'https://www.trae.cn',
     category: 'AI编程',
     imageUrl: '/trae.ai-logo.png',
+  },
+  {
+    id: 'Qoder',
+    title: 'Qoder',
+    description: '阿里巴巴推出的 AI Agentic 编程工具',
+    url: 'https://qoder.com/',
+    category: 'AI编程',
+    imageUrl: '/qoder-logo.png',
   },
   {
     id: 'v0',
